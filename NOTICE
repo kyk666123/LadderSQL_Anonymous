@@ -1,0 +1,36 @@
+LadderSQL
+Copyright (c) 2026 The LadderSQL Authors
+Licensed under the MIT License (see LICENSE).
+
+================================================================================
+Third-party components bundled in this repository
+================================================================================
+
+1) Agent Lightning  ->  third_party/agentlightning/
+   Upstream: https://github.com/microsoft/agent-lightning
+   Copyright (c) Microsoft Corporation.
+   License: MIT (see third_party/agentlightning/LICENSE).
+
+   This is a vendored snapshot of Agent Lightning (version string 0.3.1), which
+   is not available on PyPI, with local modifications required by LadderSQL's
+   multi-turn training loop. Modified sites are marked with inline comments in
+   the following files:
+     - verl/trainer.py      (adds a step-reward training variant, weight logging)
+     - verl/daemon.py, verl/dataset.py, verl/entrypoint.py, verl/config.yaml
+     - runner/agent.py      (reward span propagation)
+     - tracer/dummy.py, algorithm/apo/apo.py, __init__.py
+   All Microsoft copyright headers are retained.
+
+2) Spider evaluation scripts  ->  training/reward_func/spider_eval/
+   Derived from the official Spider benchmark evaluation code
+   (https://github.com/taoyds/spider) and its execution-accuracy variants,
+   used here to compute execution-based rewards and metrics.
+
+================================================================================
+External code not included
+================================================================================
+
+APEX-SQL: the Bird schema-linking stage reproduces APEX-SQL, whose source is
+obtained from its own authors and is NOT redistributed here. This repository
+only ships the driver scripts under schema_construction/apex_sql_runner/ that
+invoke it. See docs/01_schema_construction.md.

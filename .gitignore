@@ -1,0 +1,40 @@
+# byte-compiled
+__pycache__/
+*.py[cod]
+*.so
+
+# environments
+.venv/
+venv/
+.env
+
+# data / models / databases (never commit)
+*.sqlite
+*.sqlite3
+*.parquet
+*.zip
+*.tar
+*.tar.gz
+*.bin
+data/
+databases/
+checkpoints/
+outputs/
+results/
+cache/
+wandb/
+
+# rollout / trajectory dumps
+react_trajectories/
+*_rollouts_*.json
+*_trajectories_*.jsonl
+
+# logs
+*.log
+nohup.out
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+.ipynb_checkpoints/

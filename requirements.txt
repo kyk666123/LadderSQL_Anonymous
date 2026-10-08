@@ -1,0 +1,34 @@
+# ---- core ----
+pandas
+pyarrow
+numpy
+tqdm
+
+# ---- LLM clients / agent stack ----
+openai
+langchain
+langchain-core
+langchain-community
+langgraph
+
+# ---- SQL parsing ----
+sqlparse
+sqlglot
+
+# ---- schema value retrieval (Sec. 3.2) ----
+chromadb
+sentence-transformers
+
+# ---- RL training (Sec. 3.4) ----
+# vLLM + verl are required by the trainer; install versions matching your CUDA setup.
+torch
+vllm
+verl
+transformers
+
+# agentlightning is vendored under third_party/ (see NOTICE); add it to PYTHONPATH:
+#   export PYTHONPATH="$PWD/third_party:$PYTHONPATH"
+
+# ---- optional: figures / logging ----
+matplotlib
+wandb
