@@ -2,7 +2,7 @@
 
 **Effective Supervision for Agentic Text-to-SQL via Hierarchical Reward and Sample Selection**
 
-Official implementation of the LadderSQL paper (under submission to PVLDB).
+Official implementation of the LadderSQL paper (under submission).
 
 LadderSQL improves how much supervision an RL-trained Text-to-SQL agent extracts
 from a small annotated corpus. It combines three ideas:
